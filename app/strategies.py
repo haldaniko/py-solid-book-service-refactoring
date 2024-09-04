@@ -1,5 +1,5 @@
 import json
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree
 
 
 class ConsoleDisplay:
@@ -31,9 +31,9 @@ class JSONSerialize:
 
 class XMLSerialize:
     def serialize(self, title: str, content: str) -> str:
-        root = ET.Element("book")
-        title_element = ET.SubElement(root, "title")
+        root = xml.etree.ElementTree.Element("book")
+        title_element = xml.etree.ElementTree.SubElement(root, "title")
         title_element.text = title
-        content_element = ET.SubElement(root, "content")
+        content_element = xml.etree.ElementTree.SubElement(root, "content")
         content_element.text = content
-        return ET.tostring(root, encoding="unicode")
+        return xml.etree.ElementTree.tostring(root, encoding="unicode")
