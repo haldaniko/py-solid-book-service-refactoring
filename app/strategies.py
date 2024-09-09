@@ -14,14 +14,16 @@ class ReverseDisplay:
 
 class ConsolePrint:
     def print_book(self, title: str, content: str) -> None:
-        print(f"Printing the book: {title}...")
-        print(content)
+        print(f"Printing the book: {title}...",
+              content,
+              sep="\n")
 
 
 class ReversePrint:
     def print_book(self, title: str, content: str) -> None:
-        print(f"Printing the book in reverse: {title}...")
-        print(content[::-1])
+        print(f"Printing the book in reverse: {title}...",
+              content[::-1],
+              sep="\n")
 
 
 class JSONSerialize:

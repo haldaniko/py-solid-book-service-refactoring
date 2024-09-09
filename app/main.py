@@ -1,11 +1,13 @@
 from app.book import Book
 from app.book_processor import BookProcessor
-from app.strategies import (ConsoleDisplay,
-                            ReverseDisplay,
-                            ConsolePrint,
-                            ReversePrint,
-                            JSONSerialize,
-                            XMLSerialize)
+from app.strategies import (
+    ConsoleDisplay,
+    ReverseDisplay,
+    ConsolePrint,
+    ReversePrint,
+    JSONSerialize,
+    XMLSerialize
+)
 
 
 def main(book: Book, commands: list[tuple[str, str]]) -> None | str:
